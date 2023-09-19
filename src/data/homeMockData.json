@@ -1,0 +1,379 @@
+{
+  "name": "Reza Heidari",
+  "title": "Full Stack Software Developer",
+  "subtitle": "From Figma to deployment, I can build web applications, and I'm also proficient in crafting Windows and WPF apps.",
+  "description": "<p>In 2012, I embarked on a journey into the world of coding and software development by experimenting with both Web and Windows Applications. Since then, I've had the opportunity to develop software for various fields, including fields like <a href=\"#\">healthcare</a>, <a href=\"#\">insurance</a>, academic collaborations, <a href=\"#\">small startups</a>, and <a href=\"#\">wonderful corporations</a>, working with a wide array of individual developers.</p><p>These days, I create user-friendly applications and online experiences. My work starts with gathering information and planning. I take care of both the behind-the-scenes part (backend) of the application, including managing databases, and the visual part (frontend), leveraging wide range of tools. When everything's ready, I use various methods, including Docker and cloud services, or in some cases, traditional ways of deployment, to put the application live for users.</p><p>Away from the keyboard, I find joy in walking with my favorite tunes, spending cherished moments with my wife and our amusing cat, or spending time around <a href=\"https://www.itu.edu.tr/en\" target=\"_blank\">Istanbul Technical University</a>.</p>",
+  "menu": [
+    {
+      "title": "Download CV",
+      "url": "#cv"
+    }
+  ],
+  "social": [
+    {
+      "title": "GitHub",
+      "icon": "github.png",
+      "url": "https://github.com/mheidari988"
+    },
+    {
+      "title": "LinkedIn",
+      "icon": "linkedin.png",
+      "url": "https://www.linkedin.com/in/mohy/"
+    },
+    {
+      "title": "Stackoverflow",
+      "icon": "stackoverflow.png",
+      "url": "https://stackoverflow.com/users/6691714/reza-heidari"
+    },
+    {
+      "title": "Twitter",
+      "icon": "twitter.png",
+      "url": "https://twitter.com/mhei988"
+    },
+    {
+      "title": "Discord",
+      "icon": "discord.png",
+      "url": "https://discordapp.com/users/reza0"
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "date": "May 2022 – Current",
+      "company": "Arneca Technologies",
+      "companyUrl": "https://www.arneca.com/",
+      "title": "Software Developer",
+      "description": "The role encompasses developing resilient code for diverse client projects, including the insurance and healthcare sectors. It demands collaboration with creative directors for custom technical solutions and works with a cross-functional team to bring innovative ideas to production. Emphasis is placed on team excellence through mentorship. The role also leads accessibility initiatives, providing training and documentation.",
+      "links": [
+        {
+          "title": "Arneca",
+          "url": "https://www.arneca.com/"
+        },
+        {
+          "title": "Memorial",
+          "url": "https://www.memorial.com.tr/en"
+        },
+        {
+          "title": "Amplicade",
+          "url": "https://amplicade.com/"
+        }
+      ],
+      "skills": [
+        {
+          "title": "Asp.Net Core API",
+          "description": "Used for building robust RESTful APIs."
+        },
+        {
+          "title": "CQRS",
+          "description": "Architectural pattern for handling data manipulations."
+        },
+        {
+          "title": "MS SQL Server",
+          "description": "Relational database management system by Microsoft."
+        },
+        {
+          "title": "PostgreSQL",
+          "description": "Open-source relational database management system."
+        },
+        {
+          "title": "Elasticsearch",
+          "description": "Search and analytics engine."
+        },
+        {
+          "title": "Redis",
+          "description": "In-memory data store used for caching."
+        },
+        {
+          "title": "JavaScript",
+          "description": "Programming language for web development."
+        },
+        {
+          "title": "TypeScript",
+          "description": "Superset of JavaScript with static type definitions."
+        },
+        {
+          "title": "Angular",
+          "description": "Web application framework."
+        },
+        {
+          "title": "React",
+          "description": "Library for building user interfaces."
+        },
+        {
+          "title": "Next.js",
+          "description": "React framework for server-rendered applications."
+        },
+        {
+          "title": "CSS",
+          "description": "Styling language for web pages."
+        },
+        {
+          "title": "Docker",
+          "description": "Platform for developing, shipping, and running applications in containers."
+        },
+        {
+          "title": "Linux",
+          "description": "Unix-like, open-source operating system."
+        },
+        {
+          "title": "Azure",
+          "description": "Cloud computing service from Microsoft."
+        },
+        {
+          "title": "AWS",
+          "description": "Amazon's cloud computing platform."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "date": "Feb 2021 – May 2022",
+      "company": "Mat BioMedical",
+      "companyUrl": "http://www.matbiomedical.com/",
+      "title": "Software Developer",
+      "description": "The role involved developing web applications for water therapy devices, custom servers for end-effector systems, and management software for robotic gait rehabilitation. Engineered a custom library for Price Action/Signal Detection that handles market orders across multiple platforms. Created a UI for testing algorithmic trading strategies using broker APIs and launched an interactive website for product management and customer service.",
+      "links": [
+        {
+          "title": "AQUAMILL",
+          "url": "http://www.matbiomedical.com/AquaMill.html"
+        },
+        {
+          "title": "Easy Gait",
+          "url": "http://www.matbiomedical.com/Easy-Gait.html"
+        },
+        {
+          "title": "ISO KINETIK",
+          "url": "http://www.matbiomedical.com/Power-Rehab.html"
+        },
+        {
+          "title": "StockSharp",
+          "url": "https://stocksharp.com/"
+        },
+        {
+          "title": "Price Action Trading",
+          "url": "https://en.wikipedia.org/wiki/Price_action_trading"
+        }
+      ],
+      "skills": [
+        {
+          "title": "Asp.Net MVC",
+          "description": "Framework for building scalable web applications."
+        },
+        {
+          "title": "React",
+          "description": "JavaScript library for building user interfaces."
+        },
+        {
+          "title": "CSS",
+          "description": "Styling language for web pages."
+        },
+        {
+          "title": "jQuery",
+          "description": "JavaScript library that simplifies client-side scripting."
+        },
+        {
+          "title": "SQL Server",
+          "description": "Microsoft's relational database management system."
+        },
+        {
+          "title": "Redis",
+          "description": "In-memory data store used for various purposes including caching."
+        },
+        {
+          "title": "Node JS",
+          "description": "JavaScript runtime for server-side programming."
+        },
+        {
+          "title": "JavaScript",
+          "description": "Versatile language for both client and server-side development."
+        },
+        {
+          "title": "TypeScript",
+          "description": "JavaScript superset that allows for static typing."
+        },
+        {
+          "title": "Windows Forms Applications",
+          "description": "Framework for building Windows desktop applications."
+        },
+        {
+          "title": "WPF Application",
+          "description": "Framework for building rich desktop applications with advanced UI."
+        },
+        {
+          "title": "XAML",
+          "description": "Markup language for initializing structured values and objects."
+        },
+        {
+          "title": "MySQL",
+          "description": "Open-source relational database management system."
+        },
+        {
+          "title": "WordPress",
+          "description": "Content management system primarily used for website creation."
+        },
+        {
+          "title": "Asp.Net Core API",
+          "description": "Framework for building modern web APIs."
+        },
+        {
+          "title": "IIS",
+          "description": "Web server for hosting web applications."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "date": "Apr 2015 – Oct 2020",
+      "company": "Negin Nassaj Asia",
+      "companyUrl": "http://senatex.ir",
+      "title": "Software Developer",
+      "description": "Worked on client websites using technologies like ASP.NET and front-end languages. Contributed to debugging and QA for legacy Windows and WPF apps, serving major Iranian textile clients. Presented technical insights to stakeholders and mentored the team for enhanced productivity. Prioritized software quality through rigorous testing and best practices, resulting in reliable code. Also provided after-hours support for application stability.",
+      "links": [
+        {
+          "title": "Booria Carpet Designer",
+          "url": "https://booria.com/en-carpetdesigner-html/?lang=en"
+        },
+        {
+          "title": "Kavir Semnan",
+          "url": "http://kavirtextile.com/index.html"
+        },
+        {
+          "title": "Behnia",
+          "url": "https://behniafar.ir/"
+        }
+      ],
+      "skills": [
+        {
+          "title": ".Net Framework",
+          "description": "Used for developing various types of applications on Windows."
+        },
+        {
+          "title": ".Net Core",
+          "description": "Cross-platform framework for building modern applications."
+        },
+        {
+          "title": "Windows Forms",
+          "description": "Library for creating Windows-based applications."
+        },
+        {
+          "title": "WPF Applications",
+          "description": "Used for creating rich desktop applications with advanced UI features."
+        },
+        {
+          "title": "Asp.Net",
+          "description": "Framework for building web applications."
+        },
+        {
+          "title": "SQL Server",
+          "description": "Relational database management system by Microsoft."
+        },
+        {
+          "title": "Web Services",
+          "description": "Used for creating interoperable machine-to-machine interactions."
+        },
+        {
+          "title": "Network Sockets",
+          "description": "Enables network communication between devices."
+        },
+        {
+          "title": "TCP/IP",
+          "description": "Core protocols of the internet protocol suite."
+        },
+        {
+          "title": "IIS",
+          "description": "Web server for hosting anything on the web."
+        },
+        {
+          "title": "Windows Server",
+          "description": "Server operating system by Microsoft."
+        },
+        {
+          "title": "CSS",
+          "description": "Used for styling web pages."
+        },
+        {
+          "title": "HTML",
+          "description": "Standard markup language for creating web pages."
+        },
+        {
+          "title": "jQuery",
+          "description": "JavaScript library for client-side scripting."
+        },
+        {
+          "title": "Linux",
+          "description": "Open-source Unix-like operating system."
+        },
+        {
+          "title": "VPS Administration",
+          "description": "Managing virtual private servers for hosting."
+        }
+      ]
+    },
+    {
+      "date": "Jul 2013 – Apr 2015",
+      "company": "Atra Dade Pardaz",
+      "companyUrl": "#",
+      "title": "Software Developer",
+      "description": "Played a key role in developing a .NET application to update diverse client websites, including those in advertising and media. Engineered database solutions with MySQL and SQL Server, utilizing SOAP and XML Web Services. Developed a Windows Forms app for hourly client-side database updates. Regularly provided status reports and participated in team meetings. Led the design of new systems while providing ongoing support for existing ones and actively participated in requirement gathering.",
+      "links": [],
+      "skills": [
+        {
+          "title": "Windows Forms Applications",
+          "description": "Framework for building Windows desktop applications."
+        },
+        {
+          "title": "Access",
+          "description": "Database management system from Microsoft."
+        },
+        {
+          "title": "MySQL",
+          "description": "Open-source relational database management system."
+        },
+        {
+          "title": "SQL Server",
+          "description": "Relational database management system by Microsoft."
+        },
+        {
+          "title": "WordPress",
+          "description": "Content management system for website creation."
+        },
+        {
+          "title": "Joomla",
+          "description": "Free and open-source content management system for web content."
+        },
+        {
+          "title": "Crystal Reports",
+          "description": "Business intelligence application for creating reports."
+        },
+        {
+          "title": "User Experience",
+          "description": "Focus on enhancing user satisfaction with a product."
+        },
+        {
+          "title": "VB 6",
+          "description": "Legacy version of the Visual Basic programming language."
+        },
+        {
+          "title": "VB.Net",
+          "description": "Object-oriented programming language that is an evolution of classic Visual Basic."
+        },
+        {
+          "title": ".Net Framework",
+          "description": "Software framework for building Windows applications."
+        },
+        {
+          "title": "Telerik Controls",
+          "description": "Set of UI controls for .NET applications."
+        },
+        {
+          "title": "Silverlight",
+          "description": "Outdated framework for rich web-based applications."
+        },
+        {
+          "title": "Flash Objects",
+          "description": "Used for embedding multimedia content, now largely obsolete."
+        }
+      ]
+    }
+  ]
+}
