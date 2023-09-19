@@ -1,4 +1,3 @@
-import React from "react";
 import homeMockData from "../../data/homeMockData.json";
 import Side from "./Side";
 import Experience from "./Experience";
@@ -13,7 +12,7 @@ const Home = () => {
       <div className="content">
         <Description description={homeMockData.description} />
         {homeMockData.experiences.map((exp) => {
-          return <Experience experience={exp} />;
+          return <Experience key={exp.id} experience={exp} />;
         })}
         <Footer />
       </div>
