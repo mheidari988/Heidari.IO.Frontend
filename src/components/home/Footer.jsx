@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { fetchData } from "../../services/api";
 
 const Footer = () => {
-  const version = import.meta.env.VITE_REACT_APP_VERSION || "Unknown";
+  const [version, setVersion] = useState([]);
+
+  useEffect(() => {
+    const getVersion = async () => {
+      try {
+        const version = await fetchData("/api/version");
+        setVersion(version);
+      } catch (error) {
+        console.error("Failed to fetch version:", error);
+      }
+    };
+
+    getVersion();
+  }, []);
+
   return (
     <footer>
       This was coded in{" "}
@@ -28,7 +43,7 @@ const Footer = () => {
         Docker
       </a>
       , and published on my <a href="https://www.linux.org/">Linux</a> server.
-      [Version {version}]
+      [Version {version.informationalVersion}]
     </footer>
   );
 };
