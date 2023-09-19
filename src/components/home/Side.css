@@ -1,0 +1,52 @@
+.side {
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-left: 15%;
+  padding-right: 5%;
+  position: fixed;
+  left: 0;
+  width: 50%;
+}
+.side h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+.side h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.side .menu {
+  font-size: 14px;
+  margin-top: 50px;
+}
+.side .menu li {
+  list-style: none;
+  margin-top: 10px;
+}
+.side .social {
+  margin-top: 70px;
+  display: flex;
+  list-style: none;
+}
+.social li {
+  margin-right: 10px;
+}
+.social img {
+  width: 32px;
+}
+.social img:hover {
+  filter: drop-shadow(0 0 5px white);
+}
+.side #mailto {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .side {
+    position: static;
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%; /* Taking full width for mobile */
+  }
+}
