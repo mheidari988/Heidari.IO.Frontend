@@ -1,0 +1,69 @@
+.experience {
+  display: grid;
+  cursor: pointer;
+  margin: 50px 0px;
+  padding: 20px;
+}
+.experience:hover {
+  background-color: #1c2c4082;
+  border-radius: 10px;
+}
+.experience .left {
+  cursor: inherit;
+  padding-top: 10px;
+  grid-column: 1;
+  font-size: 14px;
+}
+.experience .right {
+  cursor: inherit;
+  padding-left: 20px;
+  grid-column: 2;
+}
+.experience .company {
+  cursor: inherit;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.experience .title {
+  cursor: inherit;
+  font-size: 14px;
+  color: var(--color-gray);
+}
+.experience .description {
+  cursor: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+.experience .skills {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.skills .skill {
+  cursor: inherit;
+  background-color: var(--tag-bg-color);
+  color: var(--tag-color);
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.experience .links {
+  line-height: 25px;
+}
+.experience .links a {
+  font-size: 12px;
+  margin: 5px;
+}
+
+@media (max-width: 1180px) {
+  .experience .left {
+    cursor: inherit;
+    padding: 20px;
+    grid-column: 2;
+    font-size: 12px;
+  }
+}
