@@ -14,7 +14,7 @@ const Menu = (props) => {
               <a
                 id={m.title.toLowerCase()}
                 className="underline_from_left"
-                href="/Resume.pdf"
+                href="https://heidaristorage.blob.core.windows.net/heidari-io-container/Resume.pdf"
                 download
               >
                 {m.title.toUpperCase()}
