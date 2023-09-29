@@ -5,7 +5,7 @@ const Description = (props) => {
   return (
     <div
       className="description"
-      dangerouslySetInnerHTML={{ __html: props.description }}
+      dangerouslySetInnerHTML={{ __html: props.data }}
     />
   );
 };
