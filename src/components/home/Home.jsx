@@ -1,4 +1,4 @@
-import homeMockData from "../../data/homeMockData.json";
+import "./Home.css";
 import Side from "./Side";
 import Experience from "./Experience";
 import Description from "./Description";
@@ -6,6 +6,7 @@ import ContactForm from "./ContactForm";
 import Footer from "./Footer";
 import { fetchData } from "../../services/api";
 import { useState, useEffect } from "react";
+import Loading from "../common/Loading";
 
 const Home = () => {
   const [portfolio, setPortfolio] = useState(null);
@@ -21,20 +22,22 @@ const Home = () => {
     getPortfolio();
   }, []);
 
-  return (
-    portfolio && (
-      <>
-        <Side data={portfolio} />
-        <div className="content">
-          <Description data={portfolio.description} />
-          {portfolio.experiences.map((exp) => {
-            return <Experience key={exp.id} experience={exp} />;
-          })}
-          <Footer />
-        </div>
-        <ContactForm />
-      </>
-    )
+  return portfolio ? (
+    <>
+      <Side data={portfolio} />
+      <div className="content">
+        <Description data={portfolio.description} />
+        {portfolio.experiences.map((exp) => {
+          return <Experience key={exp.company} experience={exp} />;
+        })}
+        <Footer />
+      </div>
+      <ContactForm />
+    </>
+  ) : (
+    <div className="loading">
+      <Loading />
+    </div>
   );
 };
 
