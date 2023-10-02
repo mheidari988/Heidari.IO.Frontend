@@ -1,3 +1,4 @@
+import "./Footer.css";
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../services/api";
 
