@@ -1,6 +1,6 @@
 import React from "react";
 import "./Side.css";
-import Menu from "./Menu";
+import Menu from "../menu/Menu";
 
 const Side = (props) => {
   return (
