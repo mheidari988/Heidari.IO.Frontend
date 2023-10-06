@@ -1,4 +1,5 @@
 import React from "react";
+import { getMonthYear } from "../../utils/date";
 import "./Experience.css";
 import Link from "../common/Link";
 import Skill from "../common/Skill";
@@ -6,7 +7,13 @@ import Skill from "../common/Skill";
 const Experience = (props) => {
   return (
     <div className="experience" key={props.experience.title}>
-      <div className="left">{props.experience.date}</div>
+      <div className="left">
+        {getMonthYear(props.experience.dateStarted)}
+        {" - "}
+        {props.experience.dateEnded
+          ? getMonthYear(props.experience.dateEnded)
+          : "Present"}
+      </div>
       <div className="right">
         <h3 className="company">
           <a
