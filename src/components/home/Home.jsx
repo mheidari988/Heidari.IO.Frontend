@@ -32,9 +32,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <div className="loading">
-      <Loading />
-    </div>
+    <Loading />
   );
 };
 
