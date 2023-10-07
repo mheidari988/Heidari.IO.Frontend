@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import "./Home.css";
 import Side from "./Side";
 import Experience from "./Experience";
@@ -5,7 +7,6 @@ import Description from "./Description";
 import ContactForm from "./ContactForm";
 import Footer from "./Footer";
 import { fetchData } from "../../services/api";
-import { useState, useEffect } from "react";
 import Loading from "../common/Loading";
 
 const Home = () => {
