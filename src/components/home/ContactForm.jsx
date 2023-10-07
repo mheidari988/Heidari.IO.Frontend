@@ -7,7 +7,7 @@ const ContactForm = () => {
   }
   return (
     <div id="contact-card">
-      <form id="contact-form" action="" method="post">
+      <form id="contact-form">
         <label htmlFor="fullName">Full name</label>
         <input type="text" name="fullName" id="fullName" />
         <label htmlFor="email">Email</label>

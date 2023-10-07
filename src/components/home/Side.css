@@ -42,3 +42,14 @@
     width: 100%; /* Taking full width for mobile */
   }
 }
+
+/* Menu Items */
+.menu {
+  font-size: 14px;
+  margin-top: 50px;
+}
+.menu-item {
+  cursor: pointer;
+  list-style: none;
+  margin-top: 10px;
+}
