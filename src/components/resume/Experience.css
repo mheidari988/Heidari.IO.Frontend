@@ -1,7 +1,7 @@
 .experience {
   display: grid;
   cursor: pointer;
-  margin: 50px 0px;
+  margin-top: 40px;
   padding: 20px;
 }
 .experience:hover {
