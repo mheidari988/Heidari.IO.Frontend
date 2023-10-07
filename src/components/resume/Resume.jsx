@@ -37,9 +37,14 @@ const Resume = (props) => {
       {props.portfolio.experiences.map((exp) => {
         return <Experience key={exp.company} experience={exp} />;
       })}
-      <a className="underline_from_left" onClick={handleDownloadCv}>
-        Download Full CV
-      </a>
+      <p>
+        <a
+          className="download-cv underline_from_left"
+          onClick={handleDownloadCv}
+        >
+          Download Full CV
+        </a>
+      </p>
     </>
   );
 };
