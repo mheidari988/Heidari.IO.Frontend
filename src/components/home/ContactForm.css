@@ -1,4 +1,4 @@
-#contact-card {
+/* #contact-card {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -8,7 +8,6 @@
   box-shadow: 0 0 200px #255c72;
   border: 1px solid lightblue;
   border-radius: 10px;
-  display: none;
 }
 #contact-card #form-close {
   position: absolute;
@@ -70,4 +69,4 @@
   #contact-card {
     width: 80%;
   }
-}
+} */

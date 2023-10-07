@@ -1,8 +1,6 @@
 import React from "react";
 import { getMonthYear } from "../../utils/date";
 import "./Experience.css";
-import Link from "../common/Link";
-import Skill from "../common/Skill";
 
 const Experience = (props) => {
   return (
@@ -30,13 +28,23 @@ const Experience = (props) => {
           dangerouslySetInnerHTML={{ __html: props.experience.description }}
         />
         <div className="links">
-          {props.experience.links.map((lnk) => {
-            return <Link link={lnk} key={lnk.title} />;
+          {props.experience.links.map((link) => {
+            return (
+              <a
+                href={link.url}
+                key={link.url}
+                target="_blank"
+                className="underline_from_center"
+              >
+                <img src="./link.svg" />
+                {link.title}
+              </a>
+            );
           })}
         </div>
         <div className="skills">
-          {props.experience.skills.map((skl) => {
-            return <Skill skill={skl} key={skl.title} />;
+          {props.experience.skills.map((skill) => {
+            return <h4 className="skill">{skill.title}</h4>;
           })}
         </div>
       </div>

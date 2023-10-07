@@ -1,3 +1,10 @@
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #load {
   position: absolute;
   width: 600px;
