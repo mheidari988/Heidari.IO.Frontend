@@ -2,9 +2,9 @@ import React from "react";
 import { getMonthYear } from "../../utils/date";
 import "./Experience.css";
 
-const Experience = (props) => {
+const Experience = (props, index) => {
   return (
-    <div className="experience" key={props.experience.title}>
+    <div className="experience">
       <div className="left">
         {getMonthYear(props.experience.dateStarted)}
         {" - "}
@@ -28,11 +28,11 @@ const Experience = (props) => {
           dangerouslySetInnerHTML={{ __html: props.experience.description }}
         />
         <div className="links">
-          {props.experience.links.map((link) => {
+          {props.experience.links.map((link, index) => {
             return (
               <a
+                key={index}
                 href={link.url}
-                key={link.url}
                 target="_blank"
                 className="underline_from_center"
               >
@@ -43,8 +43,12 @@ const Experience = (props) => {
           })}
         </div>
         <div className="skills">
-          {props.experience.skills.map((skill) => {
-            return <h4 className="skill">{skill.title}</h4>;
+          {props.experience.skills.map((skill, index) => {
+            return (
+              <h4 className="skill" key={index}>
+                {skill.title}
+              </h4>
+            );
           })}
         </div>
       </div>
