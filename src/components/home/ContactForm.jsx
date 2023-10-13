@@ -64,8 +64,8 @@ const ContactForm = () => {
 
     if (!formData.fullname) {
       errors.fullname = "Full name is required";
-    } else if (formData.fullname.length < 3) {
-      errors.fullname = "Full name must be at least 3 characters long";
+    } else if (formData.fullname.length < 3 || formData.fullname.length > 50) {
+      errors.fullname = "Full name must be between 3 and 50 characters long";
     }
 
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
@@ -82,8 +82,8 @@ const ContactForm = () => {
 
     if (!formData.message) {
       errors.message = "Message is required";
-    } else if (formData.message.length < 10 || formData.message.length > 500) {
-      errors.message = "Message must be between 10 and 500 characters long";
+    } else if (formData.message.length < 10 || formData.message.length > 1000) {
+      errors.message = "Message must be between 10 and 1000 characters long";
     }
 
     setFormErrors(errors);
