@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import "./ContactForm.css";
 import { postData } from "../../services/api";
 
@@ -8,10 +9,13 @@ const ContactForm = () => {
     email: "",
     subject: "",
     message: "",
+    recaptchaToken: "",
   };
 
   const [formData, setFormData] = useState(emptyForm);
   const [submissionStatus, setSubmissionStatus] = useState("NOT_SUBMITTED");
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const recaptchaRef = useRef(null);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -25,21 +29,25 @@ const ContactForm = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    setSubmissionStatus("SUBMITTED");
-    try {
-      const response = await postData("/api/portfolio/contact", formData);
-      if (response.success) {
-        setFormData(emptyForm);
-        setSubmissionStatus("SUCCESS");
-      } else {
+    if (recaptchaValue) {
+      setSubmissionStatus("SUBMITTED");
+      try {
+        formData["recaptchaToken"] = recaptchaValue;
+        const response = await postData("/api/portfolio/contact", formData);
+        if (response.success) {
+          setFormData(emptyForm);
+          setSubmissionStatus("SUCCESS");
+          recaptchaRef.current.reset();
+        } else {
+          setSubmissionStatus("FAILED");
+        }
+      } catch (error) {
+        console.error(
+          "Submission failed:",
+          error.response ? error.response.data : error.message
+        );
         setSubmissionStatus("FAILED");
       }
-    } catch (error) {
-      console.error(
-        "Submission failed:",
-        error.response ? error.response.data : error.message
-      );
-      setSubmissionStatus("FAILED");
     }
   }
 
@@ -47,7 +55,7 @@ const ContactForm = () => {
     <div className="content-inner">
       <div id="contact-card">
         <form id="contact-form" onSubmit={handleSubmit}>
-          <label htmlFor="fullname">Full name</label>
+          <label htmlFor="fullname">Full name (*)</label>
           <input
             type="text"
             name="fullname"
@@ -55,7 +63,7 @@ const ContactForm = () => {
             value={formData.fullname}
             onChange={handleChange}
           />
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email (*)</label>
           <input
             type="text"
             name="email"
@@ -63,7 +71,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          <label htmlFor="subject">Subject</label>
+          <label htmlFor="subject">Subject (*)</label>
           <input
             type="text"
             name="subject"
@@ -71,7 +79,7 @@ const ContactForm = () => {
             value={formData.subject}
             onChange={handleChange}
           />
-          <label htmlFor="message">Message</label>
+          <label htmlFor="message">Message (*)</label>
           <textarea
             id="message"
             name="message"
@@ -80,7 +88,22 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
           />
-          {submissionStatus !== "SUBMITTED" && (
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey={import.meta.env.VITE_CAPTCHA_SITE_KEY}
+            onChange={(value) => setRecaptchaValue(value)}
+          />
+          {submissionStatus === "SUBMITTED" ||
+          !recaptchaValue ||
+          submissionStatus === "SUCCESS" ||
+          !formData.fullname ||
+          !formData.email ||
+          !formData.subject ||
+          !formData.message ? (
+            <button id="submit-msg" disabled>
+              Submit
+            </button>
+          ) : (
             <button id="submit-msg" type="submit">
               Submit
             </button>
