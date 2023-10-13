@@ -1,26 +1,10 @@
-/* #contact-card {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin-top: 50px;
+#contact-card {
   background-color: #1c2c40;
   box-shadow: 0 0 200px #255c72;
   border: 1px solid lightblue;
   border-radius: 10px;
 }
-#contact-card #form-close {
-  position: absolute;
-  top: -16px;
-  right: -16px;
-  width: 32px;
-  height: 32px;
-  background-color: #0f1626;
-  color: white;
-  border: 1px solid #153440;
-  border-radius: 16px;
-  cursor: pointer;
-}
+
 #contact-card #form-close:hover {
   background-color: #1e2b49;
   color: white;
@@ -65,8 +49,3 @@
 #contact-form #submit-msg:active {
   border: 1px solid whitesmoke;
 }
-@media (max-width: 768px) {
-  #contact-card {
-    width: 80%;
-  }
-} */

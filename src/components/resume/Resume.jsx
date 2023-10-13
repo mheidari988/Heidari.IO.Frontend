@@ -29,7 +29,7 @@ const Resume = (props) => {
   }
 
   return (
-    <>
+    <div className="content-inner">
       <div
         className="description"
         dangerouslySetInnerHTML={{ __html: props.portfolio.description }}
@@ -45,7 +45,7 @@ const Resume = (props) => {
           Download Full CV
         </a>
       </p>
-    </>
+    </div>
   );
 };
 
