@@ -2,4 +2,5 @@ footer {
   color: var(--color-third);
   font-size: 12px;
   margin-bottom: 20px;
+  flex-shrink: 0;
 }

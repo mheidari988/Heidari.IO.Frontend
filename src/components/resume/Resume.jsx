@@ -29,13 +29,13 @@ const Resume = (props) => {
   }
 
   return (
-    <>
+    <div className="content-inner">
       <div
         className="description"
         dangerouslySetInnerHTML={{ __html: props.portfolio.description }}
       />
-      {props.portfolio.experiences.map((exp) => {
-        return <Experience key={exp.company} experience={exp} />;
+      {props.portfolio.experiences.map((exp, index) => {
+        return <Experience key={index} experience={exp} />;
       })}
       <p>
         <a
@@ -45,7 +45,7 @@ const Resume = (props) => {
           Download Full CV
         </a>
       </p>
-    </>
+    </div>
   );
 };
 
