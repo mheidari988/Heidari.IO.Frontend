@@ -13,6 +13,7 @@ const ContactForm = () => {
   };
 
   const [formData, setFormData] = useState(emptyForm);
+  const [formErrors, setFormErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("NOT_SUBMITTED");
   const [recaptchaValue, setRecaptchaValue] = useState(null);
   const recaptchaRef = useRef(null);
@@ -29,6 +30,13 @@ const ContactForm = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+
+    // First validate form
+    if (!validateForm()) {
+      return;
+    }
+
+    // Submit if captcha is provided
     if (recaptchaValue) {
       setSubmissionStatus("SUBMITTED");
       try {
@@ -51,11 +59,47 @@ const ContactForm = () => {
     }
   }
 
+  function validateForm() {
+    const errors = {};
+
+    if (!formData.fullname) {
+      errors.fullname = "Full name is required";
+    } else if (formData.fullname.length < 3) {
+      errors.fullname = "Full name must be at least 3 characters long";
+    }
+
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) {
+      errors.email = "Valid email is required";
+    } else if (formData.email.length > 255) {
+      errors.email = "Email must not exceed 255 characters";
+    }
+
+    if (!formData.subject) {
+      errors.subject = "Subject is required";
+    } else if (formData.subject.length < 3 || formData.subject.length > 100) {
+      errors.subject = "Subject must be between 3 and 100 characters long";
+    }
+
+    if (!formData.message) {
+      errors.message = "Message is required";
+    } else if (formData.message.length < 10 || formData.message.length > 500) {
+      errors.message = "Message must be between 10 and 500 characters long";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  }
+
   return (
     <div className="content-inner">
       <div id="contact-card">
         <form id="contact-form" onSubmit={handleSubmit}>
-          <label htmlFor="fullname">Full name (*)</label>
+          <label htmlFor="fullname">
+            Full name (*){" "}
+            {formErrors.fullname && (
+              <span className="error">{formErrors.fullname}</span>
+            )}
+          </label>
           <input
             type="text"
             name="fullname"
@@ -63,7 +107,12 @@ const ContactForm = () => {
             value={formData.fullname}
             onChange={handleChange}
           />
-          <label htmlFor="email">Email (*)</label>
+          <label htmlFor="email">
+            Email (*){" "}
+            {formErrors.email && (
+              <span className="error">{formErrors.email}</span>
+            )}
+          </label>
           <input
             type="text"
             name="email"
@@ -71,7 +120,12 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          <label htmlFor="subject">Subject (*)</label>
+          <label htmlFor="subject">
+            Subject (*){" "}
+            {formErrors.subject && (
+              <span className="error">{formErrors.subject}</span>
+            )}
+          </label>
           <input
             type="text"
             name="subject"
@@ -79,7 +133,12 @@ const ContactForm = () => {
             value={formData.subject}
             onChange={handleChange}
           />
-          <label htmlFor="message">Message (*)</label>
+          <label htmlFor="message">
+            Message (*){" "}
+            {formErrors.message && (
+              <span className="error">{formErrors.message}</span>
+            )}
+          </label>
           <textarea
             id="message"
             name="message"
@@ -95,11 +154,7 @@ const ContactForm = () => {
           />
           {submissionStatus === "SUBMITTED" ||
           !recaptchaValue ||
-          submissionStatus === "SUCCESS" ||
-          !formData.fullname ||
-          !formData.email ||
-          !formData.subject ||
-          !formData.message ? (
+          submissionStatus === "SUCCESS" ? (
             <button id="submit-msg" disabled>
               Submit
             </button>
