@@ -34,6 +34,7 @@
   box-shadow: 0 0 5px lightblue;
 }
 #contact-form #submit-msg {
+  margin-top: 10px;
   padding: 10px;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -46,8 +47,11 @@
 #contact-form #submit-msg:hover {
   background-color: #0a3d62;
 }
-#contact-form #submit-msg:active {
-  border: 1px solid whitesmoke;
+
+#contact-form #submit-msg:disabled {
+  background-color: #6e6f70;
+  color: rgb(163, 163, 163);
+  cursor: no-drop;
 }
 .success-msg {
   color: greenyellow;
@@ -60,4 +64,8 @@
 .info-msg {
   color: white;
   font-size: 1.3rem;
+}
+.error {
+  color: red;
+  font-size: 0.7rem;
 }

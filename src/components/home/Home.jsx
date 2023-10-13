@@ -10,12 +10,15 @@ import Resume from "../resume/Resume";
 const Home = () => {
   const [page, setPage] = useState("/");
   const [portfolio, setPortfolio] = useState(null);
+  const [isServerDown, setIsServerDown] = useState(false);
+
   useEffect(() => {
     const getPortfolio = async () => {
       try {
         const portfolioData = await fetchData("/api/portfolio");
         setPortfolio(portfolioData);
       } catch (error) {
+        setIsServerDown(true);
         console.error("Failed to fetch portfolio:", error);
       }
     };
@@ -32,7 +35,7 @@ const Home = () => {
       </div>
     </>
   ) : (
-    <Loading />
+    <Loading isServerDown={isServerDown} />
   );
 };
 
