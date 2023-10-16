@@ -6,7 +6,7 @@ function Loading(props) {
     <div className="loading">
       {props.isServerDown ? (
         <div>
-          Oops! Our servers are taking a little coffee break. We've got our best
+          Oops! My server is taking a little coffee break. I've got my best
           hamsters on it, revving up the wheels. Check back in a bit! If the
           issue persists
           <p>feel free to reach out to me at reza@heidari.io</p>
