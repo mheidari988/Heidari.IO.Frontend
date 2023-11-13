@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import "./Home.css";
 import Side from "./Side";
-import ContactForm from "./ContactForm";
+import ContactForm from "../contact-form/ContactForm";
 import Footer from "./Footer";
 import { fetchData } from "../../services/api";
 import Loading from "../common/Loading";
 import Resume from "../resume/Resume";
+import OpenSource from "../open-source/OpenSource";
+import Gpts from "../gpts/Gpts";
 
 const Home = () => {
   const [page, setPage] = useState("/");
@@ -30,6 +32,8 @@ const Home = () => {
       <Side data={portfolio} setPage={setPage} />
       <div className="content">
         {page === "/" && <Resume portfolio={portfolio} />}
+        {page === "/gpts" && <Gpts portfolio={portfolio} />}
+        {page === "/opensource" && <OpenSource />}
         {page === "/contact" && <ContactForm />}
         <Footer />
       </div>

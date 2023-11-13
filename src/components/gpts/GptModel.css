@@ -1,0 +1,40 @@
+.gpt-model-container {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.gpt-model-card {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 16px;
+  text-decoration: none;
+}
+.gpt-model-card:hover,
+.gpt-model-card:focus {
+  background-color: #1c2c4082;
+}
+
+.gpt-model-icon {
+  margin-right: 16px;
+  width: 80px; /* Adjust as needed */
+  height: 80px; /* Adjust as needed */
+  border-radius: 50%;
+}
+
+.gpt-model-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.gpt-model-title {
+  cursor: pointer;
+  margin: 0;
+  font-size: 1.2em; /* Adjust title font size as needed */
+}
+
+.gpt-model-description {
+  cursor: pointer;
+  font-size: 1em; /* Adjust description font size as needed */
+}

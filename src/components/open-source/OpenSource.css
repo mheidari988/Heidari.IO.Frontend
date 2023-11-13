@@ -1,0 +1,10 @@
+.open-source {
+  display: grid;
+  cursor: pointer;
+  margin-top: 40px;
+  padding: 20px;
+}
+.open-source:hover {
+  background-color: #1c2c4082;
+  border-radius: 10px;
+}
